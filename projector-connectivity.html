@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Projector Connectivity - ZLP-Suite Manual</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Detailed description of the ZLP-Suite and its components.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="mdbook-admonish.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="security.html"><strong aria-hidden="true">2.</strong> Safety instructions</a></li><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">3.</strong> Software overview</a></li><li class="chapter-item expanded "><a href="projector-connectivity.html" class="active"><strong aria-hidden="true">4.</strong> Projector Connectivity</a></li><li class="chapter-item expanded "><a href="licensing.html"><strong aria-hidden="true">5.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="program-directories.html"><strong aria-hidden="true">6.</strong> Program directories</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP-Manager</li><li class="chapter-item expanded "><a href="graphical-user-interface.html"><strong aria-hidden="true">7.</strong> User Interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="toolbar.html"><strong aria-hidden="true">7.1.</strong> Toolbar</a></li><li class="chapter-item "><a href="treeview.html"><strong aria-hidden="true">7.2.</strong> Tree view</a></li><li class="chapter-item "><a href="draw-area.html"><strong aria-hidden="true">7.3.</strong> Draw area</a></li><li class="chapter-item "><a href="status-buttons.html"><strong aria-hidden="true">7.4.</strong> Status buttons</a></li><li class="chapter-item "><a href="dock-widgets.html"><strong aria-hidden="true">7.5.</strong> DockWidgets</a></li></ol></li><li class="chapter-item expanded "><a href="language-settings.html"><strong aria-hidden="true">8.</strong> Language settings</a></li><li class="chapter-item expanded "><a href="import-export.html"><strong aria-hidden="true">9.</strong> Import / Export</a></li><li class="chapter-item expanded "><a href="backup.html"><strong aria-hidden="true">10.</strong> Backup</a></li><li class="chapter-item expanded "><a href="service-config.html"><strong aria-hidden="true">11.</strong> Service configuration</a></li><li class="chapter-item expanded "><a href="manager-config.html"><strong aria-hidden="true">12.</strong> Manager configuration</a></li><li class="chapter-item expanded "><a href="projector-management.html"><strong aria-hidden="true">13.</strong> Projector management</a></li><li class="chapter-item expanded "><a href="3d-setup.html"><strong aria-hidden="true">14.</strong> 3D Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="3d-setup-fcw.html"><strong aria-hidden="true">14.1.</strong> FCW Coordinate system</a></li><li class="chapter-item "><a href="3d-setup-app.html"><strong aria-hidden="true">14.2.</strong> 3D Setup application</a></li></ol></li><li class="chapter-item expanded "><a href="projection-border.html"><strong aria-hidden="true">15.</strong> Projection border</a></li><li class="chapter-item expanded "><a href="projection-settings.html"><strong aria-hidden="true">16.</strong> Projection settings</a></li><li class="chapter-item expanded "><a href="user-management.html"><strong aria-hidden="true">17.</strong> User Management</a></li><li class="chapter-item expanded "><a href="workflow-manager.html"><strong aria-hidden="true">18.</strong> Workflow-Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP-Service</li><li class="chapter-item expanded "><a href="service-overview.html"><strong aria-hidden="true">19.</strong> Overview</a></li><li class="chapter-item expanded "><a href="service-api.html"><strong aria-hidden="true">20.</strong> API</a></li><li class="chapter-item expanded affix "><li class="part-title">Zio & Zio GUI</li><li class="chapter-item expanded "><a href="zio-overview.html"><strong aria-hidden="true">21.</strong> Overview</a></li><li class="chapter-item expanded "><a href="zio-gui.html"><strong aria-hidden="true">22.</strong> Zio GUI</a></li><li class="chapter-item expanded "><a href="file-formats.html"><strong aria-hidden="true">23.</strong> Data formats</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP Python</li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">24.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="simulator.html"><strong aria-hidden="true">25.</strong> Simulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="portmap.html"><strong aria-hidden="true">25.1.</strong> Portmap</a></li><li class="chapter-item "><a href="rpcbind.html"><strong aria-hidden="true">25.2.</strong> rpcbind</a></li></ol></li><li class="chapter-item expanded "><a href="remote-control.html"><strong aria-hidden="true">26.</strong> Remote control</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="remote-control-p1.html"><strong aria-hidden="true">26.1.</strong> Projection mode (P1)</a></li><li class="chapter-item "><a href="remote-control-p2.html"><strong aria-hidden="true">26.2.</strong> Setup mode (P2)</a></li><li class="chapter-item "><a href="remote-control-p3.html"><strong aria-hidden="true">26.3.</strong> Info panel mode (P3)</a></li><li class="chapter-item "><a href="remote-control-p4.html"><strong aria-hidden="true">26.4.</strong> Clipping mode (P4)</a></li><li class="chapter-item "><a href="remote-control-00.html"><strong aria-hidden="true">26.5.</strong> Service mode</a></li></ol></li><li class="chapter-item expanded "><a href="plc.html"><strong aria-hidden="true">27.</strong> PLC interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="plc-config.html"><strong aria-hidden="true">27.1.</strong> Configuration</a></li><li class="chapter-item "><a href="plc-functions.html"><strong aria-hidden="true">27.2.</strong> Function definitions</a></li><li class="chapter-item "><a href="zlp1-pc-board.html"><strong aria-hidden="true">27.3.</strong> ZLP1 with PC board</a></li></ol></li><li class="chapter-item expanded "><a href="easy-gui.html"><strong aria-hidden="true">28.</strong> Easy-GUI</a></li><li class="chapter-item expanded "><a href="polling.html"><strong aria-hidden="true">29.</strong> Polling</a></li><li class="chapter-item expanded affix "><li class="part-title">Maintenance</li><li class="chapter-item expanded "><a href="sonic.html"><strong aria-hidden="true">30.</strong> Sonic</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ZLP-Suite Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="projector-connectivity"><a class="header" href="#projector-connectivity">Projector Connectivity</a></h1>
+<p>The ZLP projectors can be configured with static or dynamic IP address.
+The factory default configuration is DHCP and a fallback IP. From firmware 
+version 1.10 onward (May 2023) the fallback IP is <code>169.254.10.10</code> or any other 
+in the Local-Link range. Previous versions used the fallback static IP 
+<code>192.168.10.10</code>.</p>
+<p>We recommend using the <a href="sonic.html">sonic</a> tool to manage the projector network 
+configuration and check the firmware version number. Support for firmware v1.10 
+was added to Sonic v1.1.0.</p>
+<h2 id="firmware-version-110-onward"><a class="header" href="#firmware-version-110-onward">Firmware version 1.10 onward</a></h2>
+<p><em>Released on May 2023</em></p>
+<p>Due to the removal of the default static IP from the factory configuration, the
+projector is only reachable via a DHCP allocated IP or a fallback Local-Link IP.</p>
+<p>If no DHCP server is found, the projector will use the standard Local-Link 
+network range <code>169.254.x.y</code> and mask <code>255.255.0.0</code>. If the IP <code>169.254.10.10</code> is 
+available, it will be used first. Otherwise, a random IP in Local-Link network
+range is used.</p>
+<p>The default hostname of the projector is <code>zlp-&lt;serial number&gt;</code>. e.g. 
+<code>zlp-1700001985</code>. If your network configuration with DHCP supports Dynamic
+DNS updates, you can find the IP assigned to the projector by issuing a ping to 
+the hostname e.g. <code>ping zlp-1700001985</code> or <code>zlp-1700001985.local</code>.</p>
+<p>Network link up or down triggers an interface configuration. Whenever the
+network cable is plugged the network interface configuration is applied. If DHCP
+is enabled the DHCP client starts, and a request is initiated. If the link is 
+lost (cable disconnection), there is a 10 seconds timeout before de-configuring
+the network interface.</p>
+<div id="admonition-important" class="admonition tip">
+<div class="admonition-title">
+<p>Important</p>
+<p><a class="admonition-anchor-link" href="#admonition-important"></a></p>
+</div>
+<div>
+<p>Wait at least 10 seconds before switching the projector
+from one network to another, e.g from PC to Router.</p>
+</div>
+</div>
+<h3 id="one-to-one-connection"><a class="header" href="#one-to-one-connection">One-to-One Connection</a></h3>
+<p>Most modern operating systems will use a Local-Link IP if a network interface
+is configured to use DHCP and there is no response from the server. This allows
+devices to be connected one-to-one without the need of an additional DHCP 
+server. This feature is also known as Automatic Private IP Addressing (APIPA).</p>
+<p>Is possible to connect a ZLP projector with DHCP enabled to a computer directly.
+And reach it via the IP <code>169.254.10.10</code> without additional network 
+configuration. </p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>The allocation of the Local-Link address happens after a DHCP request timeout. 
+This means that the IP is available between 10 to 30 seconds after connecting 
+the projector to the network.</p>
+</div>
+</div>
+<h2 id="firmware-version-19-and-older"><a class="header" href="#firmware-version-19-and-older">Firmware version 1.9 and older</a></h2>
+<p>The factory configuration is DHCP with a fixed fallback IP <code>192.168.10.10</code> and 
+default hostname <code>zlaser-zlp</code>. The fallback IP is assigned if there is no 
+response from a DHCP server. If multiple projectors with this configuration are 
+connected to the same network without DHCP there might be an IP collision.</p>
+<h3 id="one-to-one-connection-1"><a class="header" href="#one-to-one-connection-1">One-to-One Connection</a></h3>
+<p>It is necessary to configure the PC network interface with an IP in the range 
+<code>192.168.10.x</code> with netmask <code>255.255.255.0</code>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="licensing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="licensing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

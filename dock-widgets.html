@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>DockWidgets - ZLP-Suite Manual</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Detailed description of the ZLP-Suite and its components.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="mdbook-admonish.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="security.html"><strong aria-hidden="true">2.</strong> Safety instructions</a></li><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">3.</strong> Software overview</a></li><li class="chapter-item expanded "><a href="projector-connectivity.html"><strong aria-hidden="true">4.</strong> Projector Connectivity</a></li><li class="chapter-item expanded "><a href="licensing.html"><strong aria-hidden="true">5.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="program-directories.html"><strong aria-hidden="true">6.</strong> Program directories</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP-Manager</li><li class="chapter-item expanded "><a href="graphical-user-interface.html"><strong aria-hidden="true">7.</strong> User Interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="toolbar.html"><strong aria-hidden="true">7.1.</strong> Toolbar</a></li><li class="chapter-item "><a href="treeview.html"><strong aria-hidden="true">7.2.</strong> Tree view</a></li><li class="chapter-item "><a href="draw-area.html"><strong aria-hidden="true">7.3.</strong> Draw area</a></li><li class="chapter-item "><a href="status-buttons.html"><strong aria-hidden="true">7.4.</strong> Status buttons</a></li><li class="chapter-item expanded "><a href="dock-widgets.html" class="active"><strong aria-hidden="true">7.5.</strong> DockWidgets</a></li></ol></li><li class="chapter-item expanded "><a href="language-settings.html"><strong aria-hidden="true">8.</strong> Language settings</a></li><li class="chapter-item expanded "><a href="import-export.html"><strong aria-hidden="true">9.</strong> Import / Export</a></li><li class="chapter-item expanded "><a href="backup.html"><strong aria-hidden="true">10.</strong> Backup</a></li><li class="chapter-item expanded "><a href="service-config.html"><strong aria-hidden="true">11.</strong> Service configuration</a></li><li class="chapter-item expanded "><a href="manager-config.html"><strong aria-hidden="true">12.</strong> Manager configuration</a></li><li class="chapter-item expanded "><a href="projector-management.html"><strong aria-hidden="true">13.</strong> Projector management</a></li><li class="chapter-item expanded "><a href="3d-setup.html"><strong aria-hidden="true">14.</strong> 3D Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="3d-setup-fcw.html"><strong aria-hidden="true">14.1.</strong> FCW Coordinate system</a></li><li class="chapter-item "><a href="3d-setup-app.html"><strong aria-hidden="true">14.2.</strong> 3D Setup application</a></li></ol></li><li class="chapter-item expanded "><a href="projection-border.html"><strong aria-hidden="true">15.</strong> Projection border</a></li><li class="chapter-item expanded "><a href="projection-settings.html"><strong aria-hidden="true">16.</strong> Projection settings</a></li><li class="chapter-item expanded "><a href="user-management.html"><strong aria-hidden="true">17.</strong> User Management</a></li><li class="chapter-item expanded "><a href="workflow-manager.html"><strong aria-hidden="true">18.</strong> Workflow-Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP-Service</li><li class="chapter-item expanded "><a href="service-overview.html"><strong aria-hidden="true">19.</strong> Overview</a></li><li class="chapter-item expanded "><a href="service-api.html"><strong aria-hidden="true">20.</strong> API</a></li><li class="chapter-item expanded affix "><li class="part-title">Zio & Zio GUI</li><li class="chapter-item expanded "><a href="zio-overview.html"><strong aria-hidden="true">21.</strong> Overview</a></li><li class="chapter-item expanded "><a href="zio-gui.html"><strong aria-hidden="true">22.</strong> Zio GUI</a></li><li class="chapter-item expanded "><a href="file-formats.html"><strong aria-hidden="true">23.</strong> Data formats</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP Python</li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">24.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="simulator.html"><strong aria-hidden="true">25.</strong> Simulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="portmap.html"><strong aria-hidden="true">25.1.</strong> Portmap</a></li><li class="chapter-item "><a href="rpcbind.html"><strong aria-hidden="true">25.2.</strong> rpcbind</a></li></ol></li><li class="chapter-item expanded "><a href="remote-control.html"><strong aria-hidden="true">26.</strong> Remote control</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="remote-control-p1.html"><strong aria-hidden="true">26.1.</strong> Projection mode (P1)</a></li><li class="chapter-item "><a href="remote-control-p2.html"><strong aria-hidden="true">26.2.</strong> Setup mode (P2)</a></li><li class="chapter-item "><a href="remote-control-p3.html"><strong aria-hidden="true">26.3.</strong> Info panel mode (P3)</a></li><li class="chapter-item "><a href="remote-control-p4.html"><strong aria-hidden="true">26.4.</strong> Clipping mode (P4)</a></li><li class="chapter-item "><a href="remote-control-00.html"><strong aria-hidden="true">26.5.</strong> Service mode</a></li></ol></li><li class="chapter-item expanded "><a href="plc.html"><strong aria-hidden="true">27.</strong> PLC interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="plc-config.html"><strong aria-hidden="true">27.1.</strong> Configuration</a></li><li class="chapter-item "><a href="plc-functions.html"><strong aria-hidden="true">27.2.</strong> Function definitions</a></li><li class="chapter-item "><a href="zlp1-pc-board.html"><strong aria-hidden="true">27.3.</strong> ZLP1 with PC board</a></li></ol></li><li class="chapter-item expanded "><a href="easy-gui.html"><strong aria-hidden="true">28.</strong> Easy-GUI</a></li><li class="chapter-item expanded "><a href="polling.html"><strong aria-hidden="true">29.</strong> Polling</a></li><li class="chapter-item expanded affix "><li class="part-title">Maintenance</li><li class="chapter-item expanded "><a href="sonic.html"><strong aria-hidden="true">30.</strong> Sonic</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ZLP-Suite Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="dockwidgets"><a class="header" href="#dockwidgets">DockWidgets</a></h1>
+<p>DockWidgets are windows that can be docked to certain areas of the graphical user interface.</p>
+<p>Many of the things that can be adjusted via the manager are grouped by topic and are accessible via DockWidgets.
+These windows can be added via the <em>View</em> → <em>Create DockWidget...</em> dialog:</p>
+<div align="center">
+  <img src="img/dockwidget-dialog.png"/></a>
+</div>
+<p>Under <code>Type</code> you can choose from the following DockWidgets. The setting under <code>Area</code> defines where the relevant window is initially pinned. The zones (4), (8) and above (5) in the <a href="graphical-user-interface.html#structure">areas of the graphical user interface</a> are available as docking areas.</p>
+<h2 id="dock_container"><a class="header" href="#dock_container"><code>Dock_Container</code></a></h2>
+<p>The container DockWidget initially appears as an empty area. The <a href="#dock_guitype">Dock_GUIType</a> can be used to create buttons and other graphical elements in this window.</p>
+<div align="center">
+  <img src="img/container-widget.png"/></a>
+</div>
+<h2 id="dock_guitype"><a class="header" href="#dock_guitype"><code>Dock_GUIType</code></a></h2>
+<p>This DockWidget allows creating new buttons and simple graphical elements in the <a href="graphical-user-interface.html#structure">Toolbar (3)</a> or in <a href="dock-widgets.html#dock_container">Dock_Container</a> widgets:</p>
+<div align="center">
+  <img src="img/guitype-widget.png"/></a>
+</div>
+<p>The elements can be pulled out of the DockWidget with drag &amp; drop and placed in the toolbar / Dock_Container. Further configuration is possible by right-clicking with the mouse.</p>
+<h2 id="dock_height_offset"><a class="header" href="#dock_height_offset"><code>Dock_Height_Offset</code></a></h2>
+<p>With this DockWidget, the loaded projection data can be moved across the board in the height of the Z coordinate.</p>
+<div align="center">
+  <img src="img/height-offset-widget.png"/></a>
+</div>
+<h2 id="dock_projectioneditor"><a class="header" href="#dock_projectioneditor"><code>Dock_ProjectionEditor</code></a></h2>
+<p>The DockWidget <code>Dock_ProjectionEditor</code> is already open in the <a href="graphical-user-interface.html#structure">right docking area (8)</a> when the Manager is started:</p>
+<div align="center">
+  <img src="img/projection-editor-widget.png"/></a>
+</div>
+<p>The individual buttons in the top line enable various drawing elements to be created in the <a href="graphical-user-interface.html#structure">character area (6)</a>. These are from left to right:</p>
+<ul>
+<li>Polyline</li>
+<li>Text</li>
+<li>Circle</li>
+<li>Rectangle</li>
+<li>Crosshair</li>
+<li>Arrow</li>
+</ul>
+<p>The elements are placed in the drawing area by clicking with the left mouse button. The size of the element is set directly afterwards via a drag operation with the left mouse button pressed and held.</p>
+<p>Then some element properties can be adjusted in the DockWidget.</p>
+<h2 id="dock_projector_idlist"><a class="header" href="#dock_projector_idlist"><code>Dock_Projector_IDList</code></a></h2>
+<p>The Projector Id DockWidget shows the connection status of all known projectors. This widget is the same as what can also be opened via the <a href="graphical-user-interface.html#structure">Projector Status Button (7)</a>.</p>
+<div align="center">
+  <img src="img/projector-id-widget.png"/></a>
+</div>
+<p>The &quot;Search&quot; button opens the <a href="projector-management.html#projector-search-dialog">Projector search dialog</a>. New projectors can be added to the system via this dialog.</p>
+<p>A line is added to this dialog for each projector found. The individual fields describe:</p>
+<ul>
+<li>
+<p><strong>ID</strong>: the serial number of the projector,</p>
+</li>
+<li>
+<p><strong>Name</strong>: a symbolic name of the projector; if this is missing, the serial number is displayed,</p>
+</li>
+<li>
+<p><strong>IP</strong>: the IPv4 network address of the projector,</p>
+</li>
+<li>
+<p><strong>Info</strong>: A tooltip above this field lists several projector status information:</p>
+<div align="center">
+  <img src="img/tooltip-projector.png"/></a>
+</div>
+</li>
+<li>
+<p><strong>Status</strong>: This icon takes on four different colors:</p>
+<ul>
+<li>Gray: The projector was found by searching, the &quot;Active&quot; flag is not set and the projector is not connected.</li>
+<li>Yellow: The connection establishment is in progress. A transition from gray → yellow is triggered by setting the &quot;Active&quot; checkbox.</li>
+<li>Red: The &quot;Active&quot; checkbox is set. The projector was connected, but is currently no longer accessible. Possible reasons include: network connection is disrupted, projector is turned off.
+If there is a chain link within the red icon, the projector is already connected to another Service and is therefore blocked.</li>
+<li>Green: The projector is connected to the current Service and is ready.</li>
+</ul>
+</li>
+<li>
+<p><strong>Active</strong>: Activating this checkbox starts the connection between the Service and the projector and binds the projector to the service. Connection to another service instance is no longer possible until the projector has been released again.</p>
+</li>
+<li>
+<p><strong>Actions Menu</strong> (<i class="fa fa-cog"></i>)</p>
+<div align="center">
+  <img src="img/projector-id-widget-actions.png"/></a>
+</div>
+<ul>
+<li>Replace: <a href="projector-management.html#replace-projector">Replace projector</a> with an existing or new one.</li>
+<li>Remote Control: Activating this checkbox activates the infrared receiver for remote control signals on the respective projector.</li>
+<li>Show max field: Starts a projection of the projector maximum field.</li>
+<li>Remove: Removes the projector, there are no changes to projection elements or coordinate systems.</li>
+</ul>
+</li>
+</ul>
+<p>If a projector no longer automatically connects to the Service after a restart, the connection status of all activated projectors can be refreshed using the &quot;Refresh&quot; button.</p>
+<h2 id="dock_projector_projectionborder"><a class="header" href="#dock_projector_projectionborder"><code>Dock_Projector_ProjectionBorder</code></a></h2>
+<p>This DockWidget can be used to define so-called projection parting planes. These are primarily intended for use in multi-projector systems.</p>
+<div align="center">
+  <img src="img/projection-border-widget.png"/></a>
+</div>
+<p>A parting plane is used to virtually limit the projection area of ​​one or more projectors. A more detailed description can be found in the chapter on <a href="projection-border.html">Borderlines</a>.</p>
+<h2 id="dock_propertiesview"><a class="header" href="#dock_propertiesview"><code>Dock_PropertiesView</code></a></h2>
+<p>The element properties of drawing elements can be displayed or subsequently edited using this DockWidget:</p>
+<div align="center">
+  <img src="img/properties-view-widget.png"/></a>
+</div>
+<p>This widget appears empty as long as no element is selected in the drawing area or in the tree view. Depending on the selection, this DockWidget lists the element properties and provides an input option to adjust the parameters.</p>
+<h2 id="dock_workflowmanager"><a class="header" href="#dock_workflowmanager"><code>Dock_WorkflowManager</code></a></h2>
+<p>Workflows can be defined via the work process manager, which can later be played back as instructions with multimedia content. In this way, work instructions can be predefined and linked to laser projections. Once defined, they can also be processed independently by unskilled workers.</p>
+<div align="center">
+  <img src="img/workflow-widget.png"/></a>
+</div>
+<p>A more detailed description of creating and editing workflows can be found in the chapter on the <a href="workflow-manager.html">Workflow-Manager</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="status-buttons.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="language-settings.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="status-buttons.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="language-settings.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

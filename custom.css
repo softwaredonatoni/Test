@@ -1,0 +1,24 @@
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.header {
+    color: #084987 !important;
+}
+
+div a img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #abd1ff;
+    box-shadow: 5px 5px 5px #9999aa;
+}
+
+div img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    margin-top: 5mm;
+    margin-bottom: 5mm;
+}

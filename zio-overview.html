@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Overview - ZLP-Suite Manual</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Detailed description of the ZLP-Suite and its components.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="mdbook-admonish.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="security.html"><strong aria-hidden="true">2.</strong> Safety instructions</a></li><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">3.</strong> Software overview</a></li><li class="chapter-item expanded "><a href="projector-connectivity.html"><strong aria-hidden="true">4.</strong> Projector Connectivity</a></li><li class="chapter-item expanded "><a href="licensing.html"><strong aria-hidden="true">5.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="program-directories.html"><strong aria-hidden="true">6.</strong> Program directories</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP-Manager</li><li class="chapter-item expanded "><a href="graphical-user-interface.html"><strong aria-hidden="true">7.</strong> User Interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="toolbar.html"><strong aria-hidden="true">7.1.</strong> Toolbar</a></li><li class="chapter-item "><a href="treeview.html"><strong aria-hidden="true">7.2.</strong> Tree view</a></li><li class="chapter-item "><a href="draw-area.html"><strong aria-hidden="true">7.3.</strong> Draw area</a></li><li class="chapter-item "><a href="status-buttons.html"><strong aria-hidden="true">7.4.</strong> Status buttons</a></li><li class="chapter-item "><a href="dock-widgets.html"><strong aria-hidden="true">7.5.</strong> DockWidgets</a></li></ol></li><li class="chapter-item expanded "><a href="language-settings.html"><strong aria-hidden="true">8.</strong> Language settings</a></li><li class="chapter-item expanded "><a href="import-export.html"><strong aria-hidden="true">9.</strong> Import / Export</a></li><li class="chapter-item expanded "><a href="backup.html"><strong aria-hidden="true">10.</strong> Backup</a></li><li class="chapter-item expanded "><a href="service-config.html"><strong aria-hidden="true">11.</strong> Service configuration</a></li><li class="chapter-item expanded "><a href="manager-config.html"><strong aria-hidden="true">12.</strong> Manager configuration</a></li><li class="chapter-item expanded "><a href="projector-management.html"><strong aria-hidden="true">13.</strong> Projector management</a></li><li class="chapter-item expanded "><a href="3d-setup.html"><strong aria-hidden="true">14.</strong> 3D Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="3d-setup-fcw.html"><strong aria-hidden="true">14.1.</strong> FCW Coordinate system</a></li><li class="chapter-item "><a href="3d-setup-app.html"><strong aria-hidden="true">14.2.</strong> 3D Setup application</a></li></ol></li><li class="chapter-item expanded "><a href="projection-border.html"><strong aria-hidden="true">15.</strong> Projection border</a></li><li class="chapter-item expanded "><a href="projection-settings.html"><strong aria-hidden="true">16.</strong> Projection settings</a></li><li class="chapter-item expanded "><a href="user-management.html"><strong aria-hidden="true">17.</strong> User Management</a></li><li class="chapter-item expanded "><a href="workflow-manager.html"><strong aria-hidden="true">18.</strong> Workflow-Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP-Service</li><li class="chapter-item expanded "><a href="service-overview.html"><strong aria-hidden="true">19.</strong> Overview</a></li><li class="chapter-item expanded "><a href="service-api.html"><strong aria-hidden="true">20.</strong> API</a></li><li class="chapter-item expanded affix "><li class="part-title">Zio & Zio GUI</li><li class="chapter-item expanded "><a href="zio-overview.html" class="active"><strong aria-hidden="true">21.</strong> Overview</a></li><li class="chapter-item expanded "><a href="zio-gui.html"><strong aria-hidden="true">22.</strong> Zio GUI</a></li><li class="chapter-item expanded "><a href="file-formats.html"><strong aria-hidden="true">23.</strong> Data formats</a></li><li class="chapter-item expanded affix "><li class="part-title">ZLP Python</li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">24.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="simulator.html"><strong aria-hidden="true">25.</strong> Simulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="portmap.html"><strong aria-hidden="true">25.1.</strong> Portmap</a></li><li class="chapter-item "><a href="rpcbind.html"><strong aria-hidden="true">25.2.</strong> rpcbind</a></li></ol></li><li class="chapter-item expanded "><a href="remote-control.html"><strong aria-hidden="true">26.</strong> Remote control</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="remote-control-p1.html"><strong aria-hidden="true">26.1.</strong> Projection mode (P1)</a></li><li class="chapter-item "><a href="remote-control-p2.html"><strong aria-hidden="true">26.2.</strong> Setup mode (P2)</a></li><li class="chapter-item "><a href="remote-control-p3.html"><strong aria-hidden="true">26.3.</strong> Info panel mode (P3)</a></li><li class="chapter-item "><a href="remote-control-p4.html"><strong aria-hidden="true">26.4.</strong> Clipping mode (P4)</a></li><li class="chapter-item "><a href="remote-control-00.html"><strong aria-hidden="true">26.5.</strong> Service mode</a></li></ol></li><li class="chapter-item expanded "><a href="plc.html"><strong aria-hidden="true">27.</strong> PLC interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="plc-config.html"><strong aria-hidden="true">27.1.</strong> Configuration</a></li><li class="chapter-item "><a href="plc-functions.html"><strong aria-hidden="true">27.2.</strong> Function definitions</a></li><li class="chapter-item "><a href="zlp1-pc-board.html"><strong aria-hidden="true">27.3.</strong> ZLP1 with PC board</a></li></ol></li><li class="chapter-item expanded "><a href="easy-gui.html"><strong aria-hidden="true">28.</strong> Easy-GUI</a></li><li class="chapter-item expanded "><a href="polling.html"><strong aria-hidden="true">29.</strong> Polling</a></li><li class="chapter-item expanded affix "><li class="part-title">Maintenance</li><li class="chapter-item expanded "><a href="sonic.html"><strong aria-hidden="true">30.</strong> Sonic</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ZLP-Suite Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<p>The program <em>z-io</em> is the import/export interface of the ZLP suite. Its task is
+to read in file formats and transfer them to the Service, as well as to read out
+data from the service and save it in a file.</p>
+<p><em>z-io</em> is a command line program that communicates with the Service via the same
+<a href="service-api.html">API</a> as all other applications. Internally, Zio uses a plugin
+interface and each supported file format is stored as a DLL in the
+<code>.../bin/io_plugins</code> directory.</p>
+<p>Data import/export can be done in two ways. Either as a call via the command
+line program <em>z-io</em> or the graphical application <a href="zio-gui.html"><em>z-io-gui</em></a>.</p>
+<p>Data is stored in the Service in a structure called a &quot;GeoTree&quot;. The individual
+elements in the GeoTree are uniquely identified by their name and group name.</p>
+<h2 id="calling-z-io"><a class="header" href="#calling-z-io">Calling <code>z-io</code></a></h2>
+<p>Using the <code>--help</code> option, the application displays the available parameters.
+The following list explains some of the most important ones:</p>
+<ul>
+<li>
+<p><code>--ip ADDRESS</code></p>
+<p>IP address to connect to the Service. If this option is not specified,
+<code>localhost</code> is used as the default.</p>
+</li>
+<li>
+<p><code>--port NUMBER</code></p>
+<p>Port number under which the Service can be reached. If this option is not
+specified, <code>9090</code> is used as the default.</p>
+</li>
+<li>
+<p><code>--import FILE</code></p>
+<p>Input file for reading in data. At least one of the options <code>--import</code>,
+<code>--export</code> or <code>--clear</code> must be specified.</p>
+<ul>
+<li>
+<p><code>--scale x</code></p>
+<p>By specifying this option, the data can be scaled by a factor \(x &gt; 0.0\)
+during import.</p>
+</li>
+<li>
+<p><code>--shift dx dy dz</code></p>
+<p>By specifying this option, an offset can be applied to all imported data.</p>
+</li>
+<li>
+<p><code>--coordinate-system NAME</code></p>
+<p>By specifying this option during import, the imported data is automatically
+assigned the coordinate system <code>NAME</code>.</p>
+</li>
+<li>
+<p><code>--group NAME</code></p>
+<p>By specifying this option when importing, all imported data will
+automatically be placed under a group named <code>NAME</code>.</p>
+</li>
+<li>
+<p><code>--replace</code></p>
+<p>When loading data, a naming conflict can occur if data is already stored
+under the same name. In this case, Zio automatically adds an extension to
+the name of the newer data.</p>
+<p>Specifying this option resolves these conflicts by allowing the newly
+imported data to overwrite the existing ones.</p>
+</li>
+<li>
+<p><code>--project</code></p>
+<p>This option tells Zio to start projecting all data in the configured
+coordinate systems after import.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>--export FILE</code></p>
+<p>Output file to save data. At least one of the options <code>--import</code>, <code>--export</code>
+or <code>--clear</code> must be specified.</p>
+</li>
+<li>
+<p><code>--clear</code></p>
+<p>Removes all projection elements in the GeoTree. At least one of the options
+<code>--import</code>, <code>--export</code> or <code>--clear</code> must be specified.</p>
+</li>
+</ul>
+<h3 id="configuration-file"><a class="header" href="#configuration-file">Configuration file</a></h3>
+<p>The default behavior of <em>z-io</em> can be influenced by setting certain parameters.
+These parameters and their default values can be viewed by calling
+<code>z-io --dump-settings</code>. This command can also be used to create a configuration
+file and use it in subsequent calls:</p>
+<pre><code class="language-shell">z-io --dump-settings &gt; z-io-config.toml
+# edit z-io-config.toml
+z-io --config z-io-config.toml [--import ... | --export ...]
+</code></pre>
+<p>It is also possible to create a default configuration file by using the option
+<code>--save-settings</code>. This call creates a configuration file in the directory
+<code>.z-laser</code> in the home directory of the current user. If the file is present,
+it is automatically loaded by every call of <em>z-io</em> which does not use the
+<code>--config</code> option explicitly.</p>
+<h3 id="evaluation-order"><a class="header" href="#evaluation-order">Evaluation order</a></h3>
+<p>The program <em>z-io</em> can receive parameters in multiple different ways. By doing
+so some options can overwrite others. The order of evaluation is as follows:</p>
+<ol>
+<li>
+<p>Parameters in configuration file</p>
+<pre><code class="language-toml">[z-io]
+scale = 2.0
+</code></pre>
+</li>
+<li>
+<p>Parameters after <code>--option</code></p>
+<pre><code class="language-bash">z-io &lt;...&gt; --option &quot;z-io.scale = 3.0&quot;
+</code></pre>
+</li>
+<li>
+<p>Parameters with own CLI option</p>
+<pre><code class="language-bash">z-io &lt;...&gt; --scale 4.0
+</code></pre>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="service-api.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="zio-gui.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="service-api.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="zio-gui.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
